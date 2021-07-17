@@ -1,6 +1,6 @@
 # 7MinutesWorkout
 Simple workout App
- This project uses-
+ This project uses- /n
  Intents
  Timers
  RecyclerView
