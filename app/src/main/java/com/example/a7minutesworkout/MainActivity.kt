@@ -36,5 +36,8 @@ class MainActivity : AppCompatActivity() {
         llBMI.setOnClickListener{
             startActivity(Intent(this,BmiActivity::class.java))
         }
+        llHistory.setOnClickListener {
+            startActivity(Intent(this,HistoryActivity::class.java))
+        }
     }
 }
