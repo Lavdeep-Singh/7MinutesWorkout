@@ -79,7 +79,7 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener  {
     fun setRestProgressBar(){
         progressBar.progress=restProgress //setting progress of progress bar
         restTimer=object :CountDownTimer(
-            1000,1000
+            10000,1000
         ){
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++
@@ -117,7 +117,7 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener  {
     fun setExerciseProgressBar(){
         exerciseProgressBar.progress=exerciseProgress //setting progress of progress bar
         exerciseTimer=object :CountDownTimer(
-            1000-pauseOffset,1000
+            30000-pauseOffset,1000
         ){
             override fun onTick(millisUntilFinished: Long) {
                 this@ExerciseActivity.pauseOffset =30000-millisUntilFinished
