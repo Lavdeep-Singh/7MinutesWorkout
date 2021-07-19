@@ -1,0 +1,28 @@
+Index: app/src/main/java/com/example/a7minutesworkout/database/Dao.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/a7minutesworkout/database/Dao.kt	(date 1626719594714)
++++ app/src/main/java/com/example/a7minutesworkout/database/Dao.kt	(date 1626719594714)
+@@ -1,19 +1,2 @@
+ package com.example.a7minutesworkout.database
+ 
+-import androidx.room.*
+-import androidx.room.Dao
+-
+-@Dao
+-interface Dao {
+-    @Insert
+-    fun insertData(entityHistory: EntityHistory)
+-
+-    @Delete
+-    fun deleteData(entityHistory: EntityHistory)
+-
+-    @Update
+-    fun updateData(entity: EntityHistory)
+-
+-    @Query("select * from history")
+-    fun getAllData():List<EntityHistory>
+-}
+\ No newline at end of file
