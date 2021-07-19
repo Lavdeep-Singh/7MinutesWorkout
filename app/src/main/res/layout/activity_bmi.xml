@@ -90,13 +90,74 @@
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUsUnitWeight"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etUsUnitWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="WEIGHT (in lbs)"
+                android:inputType="numberDecimal"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <LinearLayout
-            android:id="@+id/llDiplayBMIResult"
+            android:id="@+id/llUsUnitsHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUsUnitHeightFeet"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUsUnitHeightFeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Feet)"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUsUnitHeightInch"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUsUnitHeightInch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Inch"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/llDisplayBMIResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="invisible"
             tools:visibility="visible">
 
             <TextView
@@ -106,7 +167,6 @@
                 android:gravity="center"
                 android:text="YOUR BMI"
                 android:textAllCaps="true"
-                android:visibility="invisible"
                 android:textSize="16sp" />
 
             <TextView
@@ -144,7 +204,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginTop="35dp"
-            android:background="@color/colorAccent"
+            android:background="@drawable/drawable_radio_group_tab_background"
             android:text="CALCULATE"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
